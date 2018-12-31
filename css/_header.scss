@@ -1,0 +1,37 @@
+.header__container {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    font-size: 54px;
+    height: 50px;
+    font-family: $font--headers;
+    text-transform: uppercase;
+    &::before, &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 10px;
+        border-radius: 10px;
+        background-color: black;
+    }
+    &::before {
+        top: -9px;
+    }
+    &::after {
+        bottom: 0px;
+    }
+}
+
+.header__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+}
+
+.header__text--small {
+    font-size: 24px;
+    line-height: 1.05rem;
+}
