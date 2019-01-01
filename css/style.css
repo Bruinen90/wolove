@@ -146,24 +146,136 @@ body {
   color: #fff;
 }
 
+.menu__burger--special, .menu__burger--notABurger {
+  grid-template: auto/4fr 1fr;
+  border: 5px dotted #fff;
+}
+
 .menu__name {
   margin: 0;
   font-family: "Montserrat";
-  font-size: 36px;
+  font-size: 28px;
   text-transform: capitalize;
 }
 
 .menu__ingredients {
   font-family: "Montserrat";
-  font-size: 16px;
+  font-size: 14px;
   grid-column-end: span 3;
+  text-align: justify;
 }
 
 .menu__price {
   font-family: "Montserrat";
   font-weight: 600;
-  font-size: 26px;
+  font-size: 22px;
   text-align: right;
+}
+
+.kontakt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin-top: 30px;
+}
+
+.kontakt__choicesContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  height: 100%;
+}
+
+.kontakt__choiceContainer {
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+  text-align: center;
+  position: relative;
+  width: 50%;
+  cursor: pointer;
+  height: 350px;
+}
+
+.kontakt__choiceContainer--active {
+  opacity: 1;
+  background-color: #000;
+  color: #fff;
+}
+.kontakt__choiceContainer--active::after {
+  content: " ";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 30px;
+  height: 30px;
+  background-color: #000;
+  z-index: 2;
+  transform: rotate(45deg);
+}
+
+.kontakt__header {
+  font-family: "Montserrat";
+  margin: 0;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+}
+
+.kontakt__address {
+  font-family: "Montserrat";
+  margin: 10px 0;
+}
+
+.kontakt__callAndCollect {
+  font-family: "Montserrat";
+  font-size: 14px;
+  border: 4px dotted #fff;
+  padding: 5px 10px;
+  margin: 10px 0;
+}
+
+.kontakt__openingHours {
+  margin-top: 10px;
+}
+
+.kontakt__textBig {
+  font-family: "Montserrat";
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.kontakt__textSmall {
+  font-family: "Montserrat";
+  font-size: 14px;
+}
+
+.kontakt__mapsContainer {
+  width: 100%;
+  position: relative;
+}
+
+.map {
+  width: 100%;
+  height: 50vh;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.map--hidden {
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

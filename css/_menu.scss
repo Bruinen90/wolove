@@ -22,23 +22,29 @@
     }
 }
 
+.menu__burger--special, .menu__burger--notABurger {
+    grid-template: auto / 4fr 1fr;
+    border: 5px dotted $color--light--bg;
+}
+
 .menu__name {
     margin: 0;
     font-family: $font--menu--name;
-    font-size: 36px;
+    font-size: 28px;
     text-transform: capitalize;
 }
 
 .menu__ingredients {
     font-family: $font--menu--ingredients;
-    font-size: 16px;
+    font-size: 14px;
     grid-column-end: span 3;
+    text-align: justify;
 }
 
 .menu__price {
     font-family: $font--menu--name;
     font-weight: 600;
-    font-size: 26px;
+    font-size: 22px;
     text-align: right;
     // grid-row-end: span 2;
 }

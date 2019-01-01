@@ -47,10 +47,85 @@
                         </div>
                     </div>
                 </article>
+
+                <section class="kontakt">
+
+                    <div class="header__container">
+                        <div class="header__text header__text--small">Wolove<br/>Burgers</div>
+                        <div class="header__text">Kontakt</div>
+                    </div>
+
+                    <div class="kontakt__choicesContainer">
+                        <div
+                            class="kontakt__choiceContainer kontakt__choiceContainer--active"
+                            id="zielonki"
+                            onClick="changeMapHandler('zielonki')"
+                        >
+                            <h3 class="kontakt__header">Zielonki</h3>
+                            <div class="kontakt__address">ul. Krakowskie Przedmieście 116</div>
+                            <div class="kontakt__callAndCollect">
+                                Zamów i odbierz
+                                <div class="kontakt__textBig">886 087 770</div>
+                            </div>
+
+                            <div class="kontakt__openingHours">
+                                <div class="kontakt__textSmall">Godziny otwarcia:</div>
+                                <div class="kontakt__textBig">
+                                    10:00 - 20:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    poniedziałek - piątek
+                                </div>
+                                <div class="kontakt__textBig">
+                                    12:00 - 20:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    sobota, niedziela
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="kontakt__choiceContainer"
+                            id="mistrzejowice"
+                            onClick="changeMapHandler('mistrzejowice')"
+                        >
+                            <h3 class="kontakt__header">Kraków - Mistrzejowice</h3>
+                            <div class="kontakt__address">os. Złotego Wieku 94</div>
+                            <div class="kontakt__callAndCollect">
+                                Zamów i odbierz
+                                <div class="kontakt__textBig">886 803 295</div>
+                            </div>
+                            <div class="kontakt__openingHours">
+                                <div class="kontakt__textSmall">Godziny otwarcia:</div>
+                                <div class="kontakt__textBig">
+                                    11:00 - 21:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    poniedziałek - piątek
+                                </div>
+                                <div class="kontakt__textBig">
+                                    12:00 - 21:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    sobota, niedziela
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="kontakt__mapsContainer">
+                        <div class="map map--mistrzejowice map--hidden"></div>
+                        <div class="map map--zielonki"></div>
+                    </div>
+                </section>
             </div>
         </section>
+
         <script type="text/javascript" src="js/slider.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
+        <script type="text/javascript" src="js/map.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2SsZ8cEf6dwEyBxgrR0pXSpjtlqgiro&callback=initMap"
+    async defer></script>
 
     </body>
 </html>

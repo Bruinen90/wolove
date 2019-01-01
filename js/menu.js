@@ -53,15 +53,42 @@ const menu = [
         price100g: 14,
         price200g: 19,
     },
+    {
+        name: 'wolover',
+        ingredients: ['400g wołowiny', 'wszystko co najlepsze (dowolne dodatki)'],
+        specialBurger: true,
+        price: 29,
+    },
+    {
+        name: 'kurak',
+        ingredients: ['majonez', 'sałata', 'pikle', 'marynowana pierś z kurczaka', 'czerwona cebula', 'ketchup', 'pomidor'],
+        price100g: 10,
+        price200g: 15,
+    },
+    {
+        name: 'frytki belgijskie',
+        notABurger: true,
+        price: 7,
+    }
 ]
 
 const menuContainer = document.querySelector('.menu__container');
 const output = [];
 menu.forEach(burger => {
-    let ingredients = burger.ingredients.join(', ');
-    ingredients = ingredients[0].toUpperCase()+ingredients.slice(1);
-    output.push(`<div class="menu__burger"><h2 class="menu__name">${burger.name}</h2><div class="menu__price">${burger.price100g}zł</div><div class="menu__price">${burger.price200g}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
-    )
+    if(burger.notABurger) {
+        output.push(`<div class="menu__burger menu__burger--notABurger"><h2 class="menu__name">${burger.name}</h2><div class="menu__price menu__price--notABurger">${burger.price}zł</div>`
+        )
+    } else {
+        let ingredients = burger.ingredients.join(', ');
+        ingredients = ingredients[0].toUpperCase()+ingredients.slice(1);
+        if(burger.specialBurger) {
+            output.push(`<div class="menu__burger menu__burger--special"><h2 class="menu__name">${burger.name}</h2><div class="menu__price "menu__price--special">${burger.price}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
+            )
+        } else {
+            output.push(`<div class="menu__burger"><h2 class="menu__name">${burger.name}</h2><div class="menu__price">${burger.price100g}zł</div><div class="menu__price">${burger.price200g}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
+            )
+        }
+    }
 })
 
 menuContainer.innerHTML = output.join('');
