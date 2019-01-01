@@ -4,10 +4,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400i,600,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400i,600,900|Passion+One" rel="stylesheet">
         <title>WoLove Burgers Mistrzejowice, Kraków Nowa-Huta. </title>
     </head>
-    <body>
+    <body onscroll="scrollHandler()">
         <section class="slider">
             <div class="slider__container">
                 <div
@@ -28,6 +28,16 @@
                     <img src="./img/logo_medium.png" class="mainContainer__logo">
                 </div>
                 <div class="mainContainer__logoBg"></div>
+
+                <section class="quotes">
+                    <div class="quotes__quoteContainer">
+                        <div class="quotes__quote"><!-- Here comes a random quote from quotes.js --></div>
+                        <div class="quotes__author"><!-- Here comes an author from quotes.js --></div>
+                    </div>
+
+                    <div class="mouseIcon">
+                    </div>
+                </section>
 
                 <article class="menu">
 
@@ -124,6 +134,7 @@
         <script type="text/javascript" src="js/slider.js"></script>
         <script type="text/javascript" src="js/menu.js"></script>
         <script type="text/javascript" src="js/map.js"></script>
+        <script type="text/javascript" src="js/quotes.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2SsZ8cEf6dwEyBxgrR0pXSpjtlqgiro&callback=initMap"
     async defer></script>
 
