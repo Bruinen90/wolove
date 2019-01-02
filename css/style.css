@@ -84,9 +84,23 @@ body {
   height: 100px;
 }
 
+@media (min-width: 768px) {
+  .mainContainer__container {
+    max-width: 100%;
+  }
+
+  .mainContainer__logoContainer {
+    width: 300px;
+    height: 300px;
+    top: -150px;
+  }
+
+  .mainContainer__logoBg {
+    height: 200px;
+  }
+}
 .quotes {
   width: 100%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -127,6 +141,20 @@ body {
   font-size: 14px;
 }
 
+@media (min-width: 768px) {
+  .quotes {
+    align-items: center;
+    height: calc(45vh - 150px);
+  }
+
+  .quotes__quoteContainer {
+    max-width: 900px;
+  }
+
+  .quotes__author {
+    font-size: 22px;
+  }
+}
 @keyframes scroll {
   0% {
     opacity: 0;
@@ -169,6 +197,20 @@ body {
   opacity: 0;
 }
 
+@media (min-width: 768px) {
+  .mouseIcon {
+    width: 45px;
+    height: 70px;
+    bottom: 65px;
+    border: 2px solid #cccccc;
+    border-radius: 30px;
+    transition: all 1s;
+  }
+  .mouseIcon::after {
+    height: 15px;
+    top: 7px;
+  }
+}
 .header__container {
   display: inline-flex;
   align-items: center;
@@ -207,6 +249,35 @@ body {
   line-height: 1.05rem;
 }
 
+@media (min-width: 768px) {
+  .header__container {
+    font-size: 84px;
+    height: 82px;
+  }
+  .header__container::before, .header__container::after {
+    content: " ";
+    height: 10px;
+    border-radius: 10px;
+  }
+  .header__container::before {
+    top: -9px;
+  }
+  .header__container::after {
+    bottom: 0px;
+  }
+
+  .header__text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__text--small {
+    font-size: 40px;
+    line-height: 28px;
+    margin-top: -5px;
+  }
+}
 .menu {
   display: flex;
   flex-direction: column;
@@ -223,7 +294,7 @@ body {
   width: 100%;
   padding: 20px 30px;
   display: grid;
-  grid-template: auto/3fr 1fr 1fr;
+  grid-template: 1fr 1fr/3fr 1fr 1fr;
   align-items: center;
 }
 .menu__burger:nth-child(2n) {
@@ -275,6 +346,34 @@ body {
   content: "200g";
 }
 
+@media (min-width: 768px) {
+  .menu {
+    margin-bottom: 50px;
+  }
+
+  .menu__container {
+    max-width: 900px;
+    margin: 30px 0;
+  }
+
+  .menu__name {
+    font-size: 32px;
+  }
+
+  .menu__ingredients {
+    font-size: 14px;
+    text-align: justify;
+    grid-column-end: auto;
+  }
+
+  .menu__price {
+    font-weight: 900;
+    font-size: 30px;
+    grid-row-end: span 2;
+    text-align: right;
+    position: relative;
+  }
+}
 .kontakt {
   display: flex;
   flex-direction: column;
@@ -328,9 +427,6 @@ body {
 .kontakt__header {
   font-family: "Montserrat";
   margin: 0;
-  height: 3rem;
-  display: flex;
-  align-items: center;
 }
 
 .kontakt__address {
@@ -366,6 +462,47 @@ body {
   position: relative;
 }
 
+@media (min-width: 768px) {
+  .kontakt__choicesContainer {
+    width: 100%;
+    max-width: 900px;
+    margin-top: 60px;
+  }
+
+  .kontakt__choiceContainer {
+    padding: 30px 10px;
+    min-height: 400px;
+    width: 50%;
+  }
+
+  .kontakt__header {
+    display: block;
+    font-size: 32px;
+  }
+
+  .kontakt__address {
+    font-size: 24px;
+  }
+
+  .kontakt__callAndCollect {
+    font-family: "Montserrat";
+    font-size: 20px;
+    padding: 10px 20px;
+  }
+
+  .kontakt__openingHours {
+    margin-top: 15px;
+  }
+
+  .kontakt__textBig {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .kontakt__textSmall {
+    font-size: 16px;
+  }
+}
 .map {
   width: 100%;
   height: 50vh;
@@ -373,12 +510,17 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 1;
-  transition: all 0.5s;
 }
 
 .map--hidden {
-  opacity: 0;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .map {
+    width: 100%;
+    left: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

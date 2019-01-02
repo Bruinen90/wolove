@@ -42,3 +42,18 @@
 .mainContainer__logoBg {
     height: 100px;
 }
+
+@media (min-width: $desktop--min--width) {
+    .mainContainer__container {
+        max-width: 100%;
+    }
+    .mainContainer__logoContainer {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+    }
+
+    .mainContainer__logoBg {
+        height: 200px;
+    }
+}

@@ -5,10 +5,15 @@
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
-    transition: all .5s;
 }
 
 .map--hidden {
-    opacity: 0;
+    display: none;
+}
+
+@media (min-width: $desktop--min--width) {
+    .map {
+        width: 100%;
+        left: 0;
+    }
 }

@@ -30,7 +30,6 @@ const quotes = [
     {
         quote: "Humor keeps us alive. Humor and food. Don't forget food. You can go a week without laughing.",
         author: 'Joss Whedon',
-        source: '',
     },
     {
         quote: "The only time to eat diet food is while you're waiting for the burger to cook.",

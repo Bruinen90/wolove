@@ -40,3 +40,18 @@
 .mouseIcon--hidden {
     opacity: 0;
 }
+
+@media (min-width: $desktop--min--width) {
+    .mouseIcon {
+        width: 45px;
+        height: 70px;
+        bottom: 65px;
+        border: 2px solid lighten($color--dark, 80%);
+        border-radius: 30px;
+        transition: all 1s;
+        &::after {
+            height: 15px;
+            top: 7px;
+        }
+    }
+}

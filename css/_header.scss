@@ -35,3 +35,33 @@
     font-size: 24px;
     line-height: 1.05rem;
 }
+
+@media (min-width: $desktop--min--width) {
+    .header__container {
+        font-size: 84px;
+        height: 82px;
+        &::before, &::after {
+            content: ' ';
+            height: 10px;
+            border-radius: 10px;
+        }
+        &::before {
+            top: -9px;
+        }
+        &::after {
+            bottom: 0px;
+        }
+    }
+
+    .header__text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .header__text--small {
+        font-size: 40px;
+        line-height: 28px;
+        margin-top: -5px;
+    }
+}

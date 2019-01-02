@@ -53,9 +53,6 @@
 .kontakt__header {
     font-family: $font--menu--name;
     margin: 0;
-    height: 3rem;
-    display: flex;
-    align-items: center;
 }
 
 .kontakt__address {
@@ -91,4 +88,46 @@
 .kontakt__mapsContainer {
     width: 100%;
     position: relative;
+}
+
+@media (min-width: $desktop--min--width) {
+    .kontakt__choicesContainer {
+        width: 100%;
+        max-width: 900px;
+        margin-top: 60px;
+    }
+
+    .kontakt__choiceContainer {
+        padding: 30px 10px;
+        min-height: 400px;
+        width: 50%;
+    }
+
+    .kontakt__header {
+        display: block;
+        font-size: 32px;
+    }
+
+    .kontakt__address {
+        font-size: 24px;
+    }
+
+    .kontakt__callAndCollect {
+        font-family: $font--menu--ingredients;
+        font-size: 20px;
+        padding: 10px 20px;
+    }
+
+    .kontakt__openingHours {
+        margin-top: 15px;
+    }
+
+    .kontakt__textBig {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+
+    .kontakt__textSmall {
+        font-size: 16px;
+    }
 }
