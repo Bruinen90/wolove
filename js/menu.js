@@ -82,10 +82,10 @@ menu.forEach(burger => {
         let ingredients = burger.ingredients.join(', ');
         ingredients = ingredients[0].toUpperCase()+ingredients.slice(1);
         if(burger.specialBurger) {
-            output.push(`<div class="menu__burger menu__burger--special"><h2 class="menu__name">${burger.name}</h2><div class="menu__price "menu__price--special">${burger.price}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
+            output.push(`<div class="menu__burger menu__burger--special"><h2 class="menu__name">${burger.name}</h2><div class="menu__price menu__price--special">${burger.price}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
             )
         } else {
-            output.push(`<div class="menu__burger"><h2 class="menu__name">${burger.name}</h2><div class="menu__price">${burger.price100g}zł</div><div class="menu__price">${burger.price200g}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
+            output.push(`<div class="menu__burger"><h2 class="menu__name">${burger.name}</h2><div class="menu__price menu__price--small">${burger.price100g}zł</div><div class="menu__price menu__price--big">${burger.price200g}zł</div><div class="menu__ingredients">${ingredients}</div></div>`
             )
         }
     }

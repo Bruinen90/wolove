@@ -17,7 +17,7 @@ body {
 }
 .slider__container {
   width: 100%;
-  height: 60vh;
+  height: 55vh;
   position: relative;
   background-color: #000;
 }
@@ -43,7 +43,7 @@ body {
   width: 100%;
   background-color: #fff;
   position: absolute;
-  top: 60vh;
+  top: 55vh;
   left: 0;
 }
 
@@ -91,7 +91,7 @@ body {
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  height: calc(40vh - 100px);
+  height: calc(45vh - 100px);
   margin: 30px;
   margin-top: -20px;
   padding: 0 30px;
@@ -146,7 +146,7 @@ body {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 35px;
   margin: auto;
   border: 2px solid #cccccc;
   border-radius: 20px;
@@ -255,6 +255,24 @@ body {
   font-weight: 600;
   font-size: 22px;
   text-align: right;
+  position: relative;
+}
+
+.menu__price--small::before, .menu__price--big::before {
+  position: absolute;
+  top: -12px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  font-size: 10px;
+}
+
+.menu__price--small::before {
+  content: "100g";
+}
+
+.menu__price--big::before {
+  content: "200g";
 }
 
 .kontakt {

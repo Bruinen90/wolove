@@ -46,5 +46,22 @@
     font-weight: 600;
     font-size: 22px;
     text-align: right;
-    // grid-row-end: span 2;
+    position: relative;
+}
+
+.menu__price--small::before, .menu__price--big::before {
+    position: absolute;
+    top: -12px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 10px;
+}
+
+.menu__price--small::before {
+    content: '100g';
+}
+
+.menu__price--big::before{
+    content: '200g';
 }

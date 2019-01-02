@@ -56,3 +56,6 @@ const scrollHandler = () => {
         document.querySelector('.mouseIcon').classList.add('mouseIcon--hidden');
     }
 }
+
+window.addEventListener('scroll', scrollHandler);
+window.addEventListener('load', scrollHandler)
