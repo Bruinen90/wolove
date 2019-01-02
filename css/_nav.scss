@@ -1,0 +1,40 @@
+.nav {
+    font-size: 24px;
+    background-color: $color--dark;
+    color: $color--light--bg;
+    width: 100%;
+    font-family: $font--menu--name;
+    font-weight: 900;
+    padding: 30px;
+    transition: cubic-bezier(0.42, 0, 0.54, 1.82) .6s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.nav__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav__item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.nav__icon {
+    margin-right: 10px;
+}
+
+.nav--hidden {
+    top: -100%;
+}
+
+@media (min-width: $desktop--min--width) {
+    .nav {
+        display: none;
+    }
+}

@@ -8,6 +8,31 @@
         <title>WoLove Burgers Mistrzejowice, Kraków Nowa-Huta. </title>
     </head>
     <body>
+        <div class="menuToggler" onClick='toggleMenu()'>
+            <div class="menuToggler__bar menuToggler__bar1"></div>
+            <div class="menuToggler__bar menuToggler__bar2"></div>
+            <div class="menuToggler__bar menuToggler__bar3"></div>
+        </div>
+
+        <div class="nav nav--hidden">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <ion-icon class="nav__icon" name="list"></ion-icon>
+                    Nasze menu
+                </li>
+                <li class="nav__item">
+                    <ion-icon class="nav__icon" name="call"></ion-icon>
+                    Zamów i odbierz
+                </li>
+                <li class="nav__item">
+                    <ion-icon class="nav__icon" name="pin"></ion-icon>
+                    Kontakt
+                </li>
+            </ul>
+        </div>
+
+        <div class="cover cover--hidden"></div>
+
         <section class="slider">
             <div class="slider__container">
                 <div
@@ -23,11 +48,12 @@
         </section>
 
         <section class="mainContainer">
+
             <div class="mainContainer__container">
-                <div class="mainContainer__logoContainer">
-                    <img src="./img/logo_medium.png" class="mainContainer__logo">
+                <div class="logoCircle__container">
+                    <img src="./img/logo_medium.png" class="logoCircle__logo">
                 </div>
-                <div class="mainContainer__logoBg"></div>
+                <div class="logoCircle__logoBg"></div>
 
                 <section class="quotes">
                     <div class="quotes__quoteContainer">
@@ -119,6 +145,24 @@
                         <div class="map map--zielonki"></div>
                     </div>
                 </section>
+
+                <section class="footer">
+
+                    <div class="logoCircle__container logoCircle__container--dark">
+                        <img src="./img/logo_medium_white.png" class="logoCircle__logo">
+                    </div>
+
+                    <div class="footer__container">
+                        <div class="tags__list">
+                            <!-- Here comes tags from tags.js -->
+                        </div>
+
+                        <a href="mailto: max.machnik@gmail.com" class="sign">
+                            ©Bruinen
+                        </a>
+                    </div>
+
+                </section>
             </div>
         </section>
 
@@ -126,8 +170,11 @@
         <script type="text/javascript" src="js/menu.js"></script>
         <script type="text/javascript" src="js/map.js"></script>
         <script type="text/javascript" src="js/quotes.js"></script>
+        <script type="text/javascript" src="js/tags.js"></script>
+        <script type="text/javascript" src="js/menuToggler.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo2SsZ8cEf6dwEyBxgrR0pXSpjtlqgiro&callback=initMap"
     async defer></script>
+        <script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
 
     </body>
 </html>

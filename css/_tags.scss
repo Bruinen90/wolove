@@ -1,0 +1,21 @@
+.tags {
+    width: 100%;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    z-index: 3;
+}
+
+.tags__list {
+    padding: 0 10px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: $font--menu--name;
+    font-weight: 900;
+}
+
+.tags__tag {
+    margin: 0 10px;
+    align-self: center;
+}
