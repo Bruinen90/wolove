@@ -17,6 +17,42 @@ body {
   font-family: Playbill;
   src: url(../fonts/Playbill.ttf);
 }
+.slider {
+  position: relative;
+}
+
+.slider__pageTitle {
+  font-family: "Blippo";
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  right: 0;
+  top: 10vh;
+  margin: auto;
+  max-width: 80%;
+  font-weight: 900;
+  font-size: 36px;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 20px black;
+}
+.slider__pageTitle::before, .slider__pageTitle::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  width: 90%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px black;
+}
+.slider__pageTitle::before {
+  top: -15px;
+}
+.slider__pageTitle::after {
+  bottom: -15px;
+}
+
 .slider__container {
   width: 100%;
   height: 55vh;
@@ -41,6 +77,12 @@ body {
   opacity: 0;
 }
 
+@media (min-width: 768px) {
+  .slider__pageTitle {
+    font-size: 72px;
+    max-width: 650px;
+  }
+}
 .mainContainer {
   width: 100%;
   background-color: #fff;

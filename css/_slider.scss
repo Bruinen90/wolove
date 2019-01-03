@@ -1,3 +1,39 @@
+.slider {
+    position: relative;
+}
+
+.slider__pageTitle {
+    font-family: $font--headers;
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    right: 0;
+    top: 10vh;
+    margin: auto;
+    max-width: 80%;
+    font-weight: 900;
+    font-size: 36px;
+    text-align: center;
+    color: $color--light--bg;
+    text-shadow: 0 0 20px rgb(0,0,0);
+    &::before, &::after {
+        content: ' ';
+        position: absolute;
+        left: 0;
+        width: 90%;
+        height: 5px;
+        border-radius: 10px;
+        background-color: $color--light--bg;
+        box-shadow: 0 0 20px rgb(0,0,0);
+    }
+    &::before {
+        top: -15px;
+    }
+    &::after {
+        bottom: -15px;
+    }
+}
+
 .slider__container {
     width: 100%;
     height: 55vh;
@@ -20,4 +56,11 @@
 
 .slider__slide--hidden {
     opacity: 0;
+}
+
+@media (min-width: $desktop--min--width) {
+    .slider__pageTitle {
+        font-size: 72px;
+        max-width: 650px;
+    }
 }
