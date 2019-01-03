@@ -387,11 +387,14 @@ function initMap() {
 const changeMapHandler = (clickedMapClass) => {
     const clickedAddress = document.querySelector('#'+clickedMapClass);
     if(!clickedAddress.classList.contains('kontakt__choiceContainer--active')) {
+        const phones = document.querySelectorAll('.kontakt__phoneLink');
+        for(let phone of phones) {
+            phone.classList.toggle('kontakt__phoneLink--active')
+        }
         const maps = document.querySelectorAll('.map');
         for(let map of maps) {
             map.classList.toggle('map--hidden')
         }
-
         const addresses = document.querySelectorAll('.kontakt__choiceContainer');
         for(let address of addresses) {
             address.classList.toggle('kontakt__choiceContainer--active')

@@ -469,6 +469,11 @@ body {
 .kontakt__phoneLink {
   text-decoration: none;
   color: inherit;
+  pointer-events: none;
+}
+
+.kontakt__phoneLink--active {
+  pointer-events: all;
 }
 
 .kontakt__textBig {
@@ -506,6 +511,10 @@ body {
 
   .kontakt__address {
     font-size: 24px;
+  }
+
+  .kontakt__phoneLink--active {
+    pointer-events: none;
   }
 
   .kontakt__callAndCollect {

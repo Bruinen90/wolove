@@ -64,8 +64,6 @@
     font-family: $font--menu--ingredients;
     font-size: 14px;
     border: 4px dotted $color--light--bg;
-    // background-color: $color--light--bg;
-    // color: $color--dark;
     padding: 5px 10px;
     margin: 10px 0;
 }
@@ -77,6 +75,11 @@
 .kontakt__phoneLink {
     text-decoration: none;
     color: inherit;
+    pointer-events: none;
+}
+
+.kontakt__phoneLink--active {
+    pointer-events: all;
 }
 
 .kontakt__textBig {
@@ -114,6 +117,10 @@
 
     .kontakt__address {
         font-size: 24px;
+    }
+
+    .kontakt__phoneLink--active {
+        pointer-events: none;
     }
 
     .kontakt__callAndCollect {
