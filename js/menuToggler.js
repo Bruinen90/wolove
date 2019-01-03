@@ -8,3 +8,15 @@ const toggleMenu = () => {
     const cover = document.querySelector('.cover');
     cover.classList.toggle('cover--hidden');
 }
+
+const goTo = (element) => {
+    toggleMenu();
+    element.scrollIntoView({behavior: 'smooth', block: 'start'});
+}
+
+const navItems = document.querySelectorAll('.nav__item')
+navItems.forEach(item => {
+    let targetElement = document.querySelector('.'+item.dataset.target);
+
+    item.addEventListener('click', ()=>goTo(targetElement))
+})
