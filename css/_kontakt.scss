@@ -4,7 +4,7 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    margin-top: 30px;
+    padding-top: 60px;
 }
 
 .kontakt__choicesContainer {
@@ -72,6 +72,11 @@
 
 .kontakt__openingHours {
     margin-top: 10px;
+}
+
+.kontakt__phoneLink {
+    text-decoration: none;
+    color: inherit;
 }
 
 .kontakt__textBig {

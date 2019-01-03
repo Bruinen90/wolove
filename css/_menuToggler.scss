@@ -1,13 +1,14 @@
 .menuToggler {
     position: fixed;
-    right: 10px;
-    top: 10px;
+    right: 15px;
+    top: 15px;
     z-index: 100;
     width: 25px;
     height: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .menuToggler__bar {

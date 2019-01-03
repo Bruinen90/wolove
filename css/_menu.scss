@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 60px;
 }
 
 .menu__container {
@@ -78,7 +79,7 @@
         font-size: 32px;
     }
     .menu__ingredients {
-        font-size: 14px;
+        font-size: 16px;
         text-align: justify;
         grid-column-end: auto;
     }

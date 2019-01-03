@@ -260,6 +260,7 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  padding-top: 60px;
 }
 
 .menu__container {
@@ -338,7 +339,7 @@ body {
   }
 
   .menu__ingredients {
-    font-size: 14px;
+    font-size: 16px;
     text-align: justify;
     grid-column-end: auto;
   }
@@ -357,7 +358,7 @@ body {
   align-items: center;
   width: 100%;
   height: 100%;
-  margin-top: 30px;
+  padding-top: 60px;
 }
 
 .kontakt__choicesContainer {
@@ -421,6 +422,11 @@ body {
 
 .kontakt__openingHours {
   margin-top: 10px;
+}
+
+.kontakt__phoneLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 .kontakt__textBig {
@@ -599,14 +605,15 @@ body {
 }
 .menuToggler {
   position: fixed;
-  right: 10px;
-  top: 10px;
+  right: 15px;
+  top: 15px;
   z-index: 100;
   width: 25px;
   height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  cursor: pointer;
 }
 
 .menuToggler__bar {
@@ -639,13 +646,13 @@ body {
   }
 }
 .nav {
-  font-size: 24px;
+  font-size: 22px;
   background-color: #000;
   color: #fff;
   width: 100%;
   font-family: "Montserrat";
   font-weight: 900;
-  padding: 30px;
+  padding-top: 60px;
   transition: cubic-bezier(0.42, 0, 0.54, 1.82) 0.6s;
   position: fixed;
   top: 0;
@@ -662,7 +669,12 @@ body {
 .nav__item {
   display: flex;
   align-items: center;
-  margin: 20px 0;
+  cursor: pointer;
+  padding: 20px 30px;
+  border-bottom: 4px dotted #fff;
+}
+.nav__item:first-child {
+  border-top: 4px dotted #fff;
 }
 
 .nav__icon {

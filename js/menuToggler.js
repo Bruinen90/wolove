@@ -17,6 +17,9 @@ const goTo = (element) => {
 const navItems = document.querySelectorAll('.nav__item')
 navItems.forEach(item => {
     let targetElement = document.querySelector('.'+item.dataset.target);
-
-    item.addEventListener('click', ()=>goTo(targetElement))
+    if(item.dataset.target === 'facebook') {
+        item.addEventListener('click', ()=> window.open('https://www.facebook.com/WoloveBurgersMistrzejowiceNH/', '_blank'));
+    } else {
+        item.addEventListener('click', ()=>goTo(targetElement))
+    }
 })

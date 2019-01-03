@@ -1,11 +1,11 @@
 .nav {
-    font-size: 24px;
+    font-size: 22px;
     background-color: $color--dark;
     color: $color--light--bg;
     width: 100%;
     font-family: $font--menu--name;
     font-weight: 900;
-    padding: 30px;
+    padding-top: 60px;
     transition: cubic-bezier(0.42, 0, 0.54, 1.82) .6s;
     position: fixed;
     top: 0;
@@ -22,7 +22,12 @@
 .nav__item {
     display: flex;
     align-items: center;
-    margin: 20px 0;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-bottom: 4px dotted $color--light--bg;
+    &:first-child {
+        border-top: 4px dotted $color--light--bg;
+    }
 }
 
 .nav__icon {

@@ -344,7 +344,9 @@ function initMap() {
     };
 
     const mapParamsZielonki = {
-        ...mapParams,
+        zoom: 16,
+        mapTypeControl: false,
+        styles: style,
         center: {lat: 50.117995, lng: 19.920238}
     }
     const mapMistrzejowice = new google.maps.Map(document.querySelector('.map--mistrzejowice'), mapParams);
@@ -368,7 +370,18 @@ function initMap() {
             url: './img/map_pin.png',
             scaledSize: new google.maps.Size(75, 125),
         }
-    })
+    });
+
+    google.maps.event.addListener(
+        markerMistrzejowice,
+        'click',
+        ()=>window.open('https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJtZVgjrBaFkcRxR3ldrOsOYU', '_blank')
+    );
+    google.maps.event.addListener(
+        markerZielonki,
+        'click',
+        ()=>window.open('https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJV2KizQ5aFkcRTKCuWl40cMg', '_blank')
+    );
 }
 
 const changeMapHandler = (clickedMapClass) => {
