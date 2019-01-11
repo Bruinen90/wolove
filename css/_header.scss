@@ -32,8 +32,9 @@
 }
 
 .header__text--small {
-    font-size: 24px;
-    line-height: 1.05rem;
+    font-size: 26px;
+    line-height: 1.2rem;
+    margin-bottom: 4px;
 }
 
 @media (min-width: $desktop--min--width) {
@@ -49,7 +50,7 @@
             top: -9px;
         }
         &::after {
-            bottom: 0px;
+            bottom: 5px;
         }
     }
 

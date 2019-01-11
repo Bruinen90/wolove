@@ -30,6 +30,28 @@
     }
 }
 
+.nav__item--fanpage {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.nav__fanpage {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 10px;
+}
+
+.nav__fanpageContainer {
+    margin: 20px;
+    margin-bottom: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.nav__fanpageContainer--hidden {
+    display: none;
+}
+
 .nav__icon {
     margin-right: 10px;
 }
@@ -39,6 +61,12 @@
 }
 
 @media (min-width: $desktop--min--width) {
+    .nav {
+        display: none;
+    }
+}
+
+@media print {
     .nav {
         display: none;
     }

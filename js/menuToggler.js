@@ -18,7 +18,10 @@ const navItems = document.querySelectorAll('.nav__item')
 navItems.forEach(item => {
     let targetElement = document.querySelector('.'+item.dataset.target);
     if(item.dataset.target === 'facebook') {
-        item.addEventListener('click', ()=> window.open('https://www.facebook.com/WoloveBurgersMistrzejowiceNH/', '_blank'));
+        item.addEventListener('click', ()=> {
+            const fanList = document.querySelector('ul.nav__fanpageContainer');
+            fanList.classList.toggle('nav__fanpageContainer--hidden');
+        });
     } else {
         item.addEventListener('click', ()=>goTo(targetElement))
     }

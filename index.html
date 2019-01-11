@@ -30,14 +30,30 @@
                     <ion-icon class="nav__icon" name="pin"></ion-icon>
                     Kontakt
                 </li>
-                <li class="nav__item"  data-target="facebook">
-                    <ion-icon class="nav__icon" name="logo-facebook"></ion-icon>
-                    Aktualności i promocje
+                <li class="nav__item nav__item--fanpage"  data-target="facebook">
+                    <div>
+                        <ion-icon class="nav__icon" name="logo-facebook"></ion-icon>
+                        Nasze fanpage
+                    </div>
+                    <ul class="nav__fanpageContainer nav__fanpageContainer--hidden">
+                        <li class="nav__fanpage">
+                            <a href="https://www.facebook.com/WoloveBurgersMistrzejowiceNH/" target="_blank">
+                                <ion-icon class="nav__icon" name="home"></ion-icon>
+                                Mistrzejowice NH
+                            </a>
+                        </li>
+                        <li class="nav__fanpage">
+                            <a href="https://www.facebook.com/WoLoveBurgers/" target="_blank">
+                                <ion-icon class="nav__icon" name="home"></ion-icon>
+                                Zielonki
+                            </a>
+                        </li>
+                    </ul>
                 </li>
             </ul>
         </div>
 
-        <div class="cover cover--hidden"></div>
+        <div class="cover cover--hidden" onclick="toggleMenu()"></div>
 
         <section class="slider">
             <!--
@@ -59,21 +75,17 @@
         </section>
 
         <section class="mainContainer">
-
             <div class="mainContainer__container">
                 <div class="logoCircle__container">
                     <img src="./img/logo_medium.png" class="logoCircle__logo">
                 </div>
                 <div class="logoCircle__logoBg"></div>
 
-                <section class="quotes">
-                    <div class="quotes__quoteContainer">
-                        <div class="quotes__quote"><!-- Here comes a random quote from quotes.js --></div>
-                        <div class="quotes__author"><!-- Here comes an author from quotes.js --></div>
-                    </div>
-
+                <div class="about">
+                    Wolove Burgers to miejsce, które powstało z pasji do zdrowego jedzenia - slow food. Tak! Burgery mogą być zdrowe, jeśli są przygotowane z wysokiej jakości świeżego miesa wołowego bez zbędnych polepszaczy smaku.
                     <div class="mouseIcon"></div>
-                </section>
+                </div>
+
 
                 <article class="menu" id="#menu">
 
@@ -84,7 +96,23 @@
 
                     <div class="menu__container">
                     </div>
+
+                    <div class="menu__meat">
+                        <p>
+                            Każdy z naszym burgerów zawiera 100 lub 200 gramów najwyższej jakości, 100% mięsa wołowego od lokalnych dostawców.
+                        </p>
+                        <p>
+                            W naszych burgerach znajdziesz tylko naturalne przyprawy, lokalne produkty, soczyste warzywa, aromatyczne sery i wyjątkowe sosy. Wszystko po to, abyś mógł poznać smak najlepszych burgerów.
+                        </p>
+                    </div>
                 </article>
+
+                <section class="quotes">
+                    <div class="quotes__quoteContainer">
+                        <div class="quotes__quote"><!-- Here comes a random quote from quotes.js --></div>
+                        <div class="quotes__author"><!-- Here comes an author from quotes.js --></div>
+                    </div>
+                </section>
 
                 <section class="kontakt">
 
@@ -96,6 +124,35 @@
                     <div class="kontakt__choicesContainer">
                         <div
                             class="kontakt__choiceContainer kontakt__choiceContainer--active"
+                            id="mistrzejowice"
+                            onClick="changeMapHandler('mistrzejowice')"
+                        >
+                            <h3 class="kontakt__header">Kraków - Mistrzejowice</h3>
+                            <div class="kontakt__address">os. Złotego Wieku 94</div>
+                            <div class="kontakt__callAndCollect">
+                                Zamów i odbierz
+                                <div class="kontakt__textBig">
+                                    <a href="tel: +48886803295" class="kontakt__phoneLink">886 803 295</a>
+                                </div>
+                            </div>
+                            <div class="kontakt__openingHours">
+                                <div class="kontakt__textSmall">Godziny otwarcia:</div>
+                                <div class="kontakt__textBig">
+                                    11:00 - 21:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    poniedziałek - piątek
+                                </div>
+                                <div class="kontakt__textBig">
+                                    12:00 - 21:00
+                                </div>
+                                <div class="kontakt__textSmall">
+                                    sobota, niedziela
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="kontakt__choiceContainer"
                             id="zielonki"
                             onClick="changeMapHandler('zielonki')"
                         >
@@ -128,40 +185,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div
-                            class="kontakt__choiceContainer"
-                            id="mistrzejowice"
-                            onClick="changeMapHandler('mistrzejowice')"
-                        >
-                            <h3 class="kontakt__header">Kraków - Mistrzejowice</h3>
-                            <div class="kontakt__address">os. Złotego Wieku 94</div>
-                            <div class="kontakt__callAndCollect">
-                                Zamów i odbierz
-                                <div class="kontakt__textBig">
-                                    <a href="tel: +48886803295" class="kontakt__phoneLink">886 803 295</a>
-                                </div>
-                            </div>
-                            <div class="kontakt__openingHours">
-                                <div class="kontakt__textSmall">Godziny otwarcia:</div>
-                                <div class="kontakt__textBig">
-                                    11:00 - 21:00
-                                </div>
-                                <div class="kontakt__textSmall">
-                                    poniedziałek - piątek
-                                </div>
-                                <div class="kontakt__textBig">
-                                    12:00 - 21:00
-                                </div>
-                                <div class="kontakt__textSmall">
-                                    sobota, niedziela
-                                </div>
-                            </div>
-                        </div>
                     </div>
 
                     <div class="kontakt__mapsContainer">
-                        <div class="map map--mistrzejowice map--hidden"></div>
-                        <div class="map map--zielonki"></div>
+                        <div class="map map--mistrzejowice"></div>
+                        <div class="map map--zielonki map--hidden"></div>
                     </div>
                 </section>
 

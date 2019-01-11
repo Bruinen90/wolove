@@ -1,4 +1,4 @@
-const tags = 'burgery, Nowa Huta, Kraków, Zielonki, os. Złotego Wieku, restauracja, fast food, frytki belgijskie, Mistrzejowice, zajezdnia, cheeseburger, burger'
+const tags = 'burgery, Nowa Huta, Kraków, Zielonki, os. Złotego Wieku, food porn, slow food, frytki belgijskie, Mistrzejowice, zajezdnia, cheeseburger, burger'
 const tagsArr = tags.split(', ');
 
 const shuffle = (arr) => {

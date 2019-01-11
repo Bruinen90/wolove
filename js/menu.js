@@ -43,7 +43,7 @@ const menu = [
     },
     {
         name: 'roman',
-        ingredients: ['pesto', 'sałata', 'oliwki', 'mozzarella', 'szynka parmeńska', 'pomidor duszony'],
+        ingredients: ['pesto', 'sałata', 'oliwki', 'mozzarella', 'szynka parmeńska', 'pomidor suszony', 'parmezan'],
         price100g: 15,
         price200g: 20,
     },
