@@ -39,18 +39,18 @@
 
 @media (min-width: $desktop--min--width) {
     .header__container {
-        font-size: 84px;
-        height: 82px;
+        font-size: 120px;
+        height: 108px;
         &::before, &::after {
             content: ' ';
             height: 10px;
             border-radius: 10px;
         }
         &::before {
-            top: -9px;
+            top: -10px;
         }
         &::after {
-            bottom: 5px;
+            bottom: 10px;
         }
     }
 
@@ -61,8 +61,8 @@
     }
 
     .header__text--small {
-        font-size: 40px;
-        line-height: 28px;
-        margin-top: -5px;
+        font-size: 58px;
+        line-height: 42px;
+        margin-top: -8px;
     }
 }

@@ -82,10 +82,42 @@ a {
   opacity: 0;
 }
 
+.slider__slide--1 {
+  background-image: url("../img/burger_wolove_bbq.jpg");
+}
+
+.slider__slide--2 {
+  background-image: url("../img/burgery_przekroj.jpg");
+}
+
+.slider__slide--3 {
+  background-image: url("../img/burgery_grill.jpg");
+}
+
+.slider__slide--4 {
+  background-image: url("../img/burgery_naturalne.jpg");
+}
+
+.slider__slide--5 {
+  background-image: url("../img/frytki_belgijskie.jpg");
+}
+
+.slider__slide--6 {
+  background-image: url("../img/wolove_krowa.jpg");
+}
+
 @media (min-width: 768px) {
   .slider__pageTitle {
     font-size: 72px;
     max-width: 650px;
+  }
+
+  .slider__slide--mobile {
+    display: none;
+  }
+
+  .slider__slide--5 {
+    background-image: url("../img/burger_menu.jpg");
   }
 }
 .mainContainer {
@@ -276,8 +308,8 @@ a {
 
 @media (min-width: 768px) {
   .header__container {
-    font-size: 84px;
-    height: 82px;
+    font-size: 120px;
+    height: 108px;
   }
   .header__container::before, .header__container::after {
     content: " ";
@@ -285,10 +317,10 @@ a {
     border-radius: 10px;
   }
   .header__container::before {
-    top: -9px;
+    top: -10px;
   }
   .header__container::after {
-    bottom: 5px;
+    bottom: 10px;
   }
 
   .header__text {
@@ -298,9 +330,9 @@ a {
   }
 
   .header__text--small {
-    font-size: 40px;
-    line-height: 28px;
-    margin-top: -5px;
+    font-size: 58px;
+    line-height: 42px;
+    margin-top: -8px;
   }
 }
 .menu {

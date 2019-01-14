@@ -54,7 +54,7 @@ const menu = [
         price200g: 19,
     },
     {
-        name: 'wolover',
+        name: 'wolover / Wójt',
         ingredients: ['400g wołowiny', 'wszystko co najlepsze (dowolne dodatki)'],
         specialBurger: true,
         price: 29,
