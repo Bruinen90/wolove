@@ -62,7 +62,17 @@
 
 @media (min-width: $desktop--min--width) {
     .nav {
-        display: none;
+        width: 500px;
+        height: 100%;
+        left: auto;
+        right: 0;
+        background-color: rgba($color--dark, .7);
+        padding-top: 100px;
+    }
+
+    .nav--hidden {
+        top: auto;
+        transform: translateX(100%);
     }
 }
 

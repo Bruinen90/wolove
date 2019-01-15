@@ -106,6 +106,11 @@ a {
   background-image: url("../img/wolove_krowa.jpg");
 }
 
+.slider__slide--7 {
+  background-image: url("../img/wolove_lokal.jpg");
+  background-position: 20% 0%;
+}
+
 @media (min-width: 768px) {
   .slider__pageTitle {
     font-size: 72px;
@@ -118,6 +123,10 @@ a {
 
   .slider__slide--5 {
     background-image: url("../img/burger_menu.jpg");
+  }
+
+  .slider__slide--7 {
+    background-position: center;
   }
 }
 .mainContainer {
@@ -257,7 +266,7 @@ a {
   .mouseIcon {
     width: 45px;
     height: 70px;
-    bottom: 65px;
+    bottom: 0px;
     border: 2px solid #cccccc;
     border-radius: 30px;
     transition: all 1s;
@@ -748,7 +757,28 @@ a {
 
 @media (min-width: 768px) {
   .menuToggler {
-    display: none;
+    width: 40px;
+    height: 30px;
+    right: 40px;
+    top: 40px;
+  }
+
+  .menuToggler__bar {
+    height: 4px;
+  }
+
+  .menuToggler--clicked .menuToggler__bar1 {
+    transform: none;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.8);
+  }
+
+  .menuToggler--clicked .menuToggler__bar2 {
+    opacity: 1;
+  }
+
+  .menuToggler--clicked .menuToggler__bar3 {
+    transform: none;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.8);
   }
 }
 .nav {
@@ -815,7 +845,17 @@ a {
 
 @media (min-width: 768px) {
   .nav {
-    display: none;
+    width: 500px;
+    height: 100%;
+    left: auto;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 100px;
+  }
+
+  .nav--hidden {
+    top: auto;
+    transform: translateX(100%);
   }
 }
 @media print {
@@ -837,6 +877,11 @@ a {
   display: none;
 }
 
+@media (min-width: 768px) {
+  .cover {
+    opacity: 0;
+  }
+}
 .about {
   height: calc(45vh - 100px);
   padding: 0px 30px;
@@ -860,8 +905,9 @@ a {
 @media (min-width: 768px) {
   .about {
     font-size: 20px;
-    max-width: 600px;
+    max-width: 750px;
     height: calc(40vh - 150px);
+    margin-top: -35px;
   }
   .about::before {
     content: '"';

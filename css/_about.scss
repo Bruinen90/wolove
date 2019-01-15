@@ -21,8 +21,9 @@
 @media (min-width: $desktop--min--width) {
     .about {
         font-size: 20px;
-        max-width: 600px;
+        max-width: 750px;
         height: calc(40vh - 150px);
+        margin-top: -35px;
         &::before {
             content: '"';
             font-size: 350px;

@@ -11,3 +11,9 @@
 .cover--hidden {
     display: none;
 }
+
+@media (min-width: $desktop--min--width) {
+    .cover {
+        opacity: 0;
+    }
+}
