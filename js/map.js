@@ -341,13 +341,15 @@ function initMap() {
         zoom: 16,
         mapTypeControl: false,
         styles: style,
+        streetViewControl: false,
     };
 
     const mapParamsZielonki = {
         zoom: 16,
         mapTypeControl: false,
         styles: style,
-        center: {lat: 50.117995, lng: 19.920238}
+        center: {lat: 50.117995, lng: 19.920238},
+        streetViewControl: false,
     }
     const mapMistrzejowice = new google.maps.Map(document.querySelector('.map--mistrzejowice'), mapParams);
     const mapZielonki = new google.maps.Map(document.querySelector('.map--zielonki'), mapParamsZielonki);
