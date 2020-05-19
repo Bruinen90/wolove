@@ -334,17 +334,33 @@ const mapStyle = [
 	},
 ];
 
-export const markerOptions = {
-	animation: google.maps.Animation.DROP,
-	icon: {
-		url: './img/map_pin.png',
-		scaledSize: new google.maps.Size(75, 125),
-	},
-};
+function initMap() {
+	const mapParamsZielonki = {
+		center: { lat: 50.117995, lng: 19.920238 },
+		zoom: 16,
+		mapTypeControl: false,
+		styles: mapStyle,
+		streetViewControl: false,
+	};
+	const mapZielonki = new google.maps.Map(
+		document.querySelector('.map--zielonki'),
+		mapParamsZielonki
+	);
 
-export const mapParams = {
-	zoom: 16,
-	mapTypeControl: false,
-	styles: mapStyle,
-	streetViewControl: false,
-};
+	const markerZielonki = new google.maps.Marker({
+		position: new google.maps.LatLng(50.117995, 19.920238),
+		map: mapZielonki,
+		animation: google.maps.Animation.DROP,
+		icon: {
+			url: './img/map_pin.png',
+			scaledSize: new google.maps.Size(75, 125),
+		},
+	});
+
+	google.maps.event.addListener(markerZielonki, 'click', () =>
+		window.open(
+			'https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJV2KizQ5aFkcRTKCuWl40cMg',
+			'_blank'
+		)
+	);
+}

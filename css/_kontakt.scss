@@ -1,144 +1,154 @@
 .kontakt {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-top: 60px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	padding-top: 60px;
 }
 
 .kontakt__choicesContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
-    height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 
 .kontakt__choiceContainer {
-    color: #ccc;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0px;
-    text-align: center;
-    position: relative;
-    width: 50%;
-    cursor: pointer;
-    // border-top: 4px solid $color--dark;
-    // border-bottom: 4px solid $color--dark;
-    height: 350px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0px;
+	text-align: center;
+	position: relative;
+	width: 100%;
+	height: 350px;
+	opacity: 1;
+	background-color: $color--dark;
+	color: $color--light--bg;
+	&::after {
+		content: ' ';
+		position: absolute;
+		bottom: -15px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 30px;
+		height: 30px;
+		background-color: $color--dark;
+		z-index: 2;
+		transform: rotate(45deg);
+	}
 }
-
-.kontakt__choiceContainer--active {
-    opacity: 1;
-    background-color: $color--dark;
-    color: $color--light--bg;
-    &::after {
-        content: " ";
-        position: absolute;
-        bottom: -15px;
-        left: 0;
-        right: 0;
-        margin: auto;
-        width: 30px;
-        height: 30px;
-        background-color: $color--dark;
-        z-index: 2;
-        transform: rotate(45deg);
-    }
-}
-
 .kontakt__header {
-    font-family: $font--menu--name;
-    margin: 0;
+	font-family: $font--menu--name;
+	margin: 0;
 }
 
 .kontakt__address {
-    font-family: $font--menu--ingredients;
-    margin: 10px 0;
+	font-family: $font--menu--ingredients;
+	margin: 10px 0;
 }
 
 .kontakt__callAndCollect {
-    font-family: $font--menu--ingredients;
-    font-size: 14px;
-    border: 4px dotted $color--light--bg;
-    padding: 5px 10px;
-    margin: 10px 0;
+	font-family: $font--menu--ingredients;
+	font-size: 14px;
+	border: 4px dotted $color--light--bg;
+	padding: 5px 10px;
+	margin: 10px 0;
 }
 
 .kontakt__openingHours {
-    margin-top: 10px;
+	margin-top: 10px;
 }
 
 .kontakt__phoneLink {
-    text-decoration: none;
-    color: inherit;
-    pointer-events: none;
+	text-decoration: none;
+	color: inherit;
+	pointer-events: none;
 }
 
 .kontakt__phoneLink--active {
-    pointer-events: all;
+	pointer-events: all;
 }
 
 .kontakt__textBig {
-    font-family: $font--menu--ingredients;
-    font-size: 20px;
-    margin-top: 6px;
+	font-family: $font--menu--ingredients;
+	font-size: 20px;
+	margin-top: 6px;
 }
 
 .kontakt__textSmall {
-    font-family: $font--menu--ingredients;
-    font-size: 14px;
+	font-family: $font--menu--ingredients;
+	font-size: 14px;
 }
 
 .kontakt__mapsContainer {
-    width: 100%;
+	width: 100%;
+}
+
+.kontakt__changeRestaurantBox {
+	border: 1px solid white;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: $font--menu--name;
+	padding: 0.5rem;
+    font-size: 0.8rem;
+    margin: 1rem 0;
 }
 
 @media (min-width: $desktop--min--width) {
-    .kontakt__choicesContainer {
-        width: 100%;
-        max-width: 900px;
-        margin-top: 60px;
-    }
+	.kontakt__choicesContainer {
+		width: 100%;
+		max-width: 900px;
+		margin-top: 60px;
+	}
 
-    .kontakt__choiceContainer {
-        padding: 30px 10px;
-        min-height: 400px;
-        width: 50%;
-    }
+	.kontakt__choiceContainer {
+		padding: 30px 10px;
+		min-height: 400px;
+	}
 
-    .kontakt__header {
-        display: block;
-        font-size: 32px;
-    }
+	.kontakt__header {
+		display: block;
+		font-size: 32px;
+	}
 
-    .kontakt__address {
-        font-size: 24px;
-    }
+	.kontakt__address {
+		font-size: 24px;
+	}
 
-    .kontakt__phoneLink--active {
-        pointer-events: none;
-    }
+	.kontakt__callAndCollect {
+		font-family: $font--menu--ingredients;
+		font-size: 20px;
+		padding: 10px 20px;
+	}
 
-    .kontakt__callAndCollect {
-        font-family: $font--menu--ingredients;
-        font-size: 20px;
-        padding: 10px 20px;
-    }
+	.kontakt__openingHours {
+		margin-top: 15px;
+	}
 
-    .kontakt__openingHours {
-        margin-top: 15px;
-    }
+	.kontakt__textBig {
+		font-size: 24px;
+		margin-top: 10px;
+	}
 
-    .kontakt__textBig {
-        font-size: 24px;
-        margin-top: 10px;
-    }
+	.kontakt__textSmall {
+		font-size: 16px;
+	}
 
-    .kontakt__textSmall {
-        font-size: 16px;
-    }
+	.kontakt__changeRestaurantBox {
+		position: absolute;
+		top: 22px;
+        right: 22px;
+        margin: 0;
+	}
 }

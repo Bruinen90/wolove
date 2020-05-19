@@ -116,12 +116,6 @@ const menu = [
 		price100g: 17,
 		price200g: 22,
 	},
-	// {
-	//     name: 'yes-ser',
-	//     ingredients: ['majonez', 'sałata', 'pikle', 'ser mozzarella', 'brie', 'lazur', 'parmezan', 'czerwona cebula', 'pomidor', 'ketchup'],
-	//     price100g: 15,
-	//     price200g: 20,
-	// },
 	{
 		name: 'kohonez',
 		ingredients: [

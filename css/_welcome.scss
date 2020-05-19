@@ -1,0 +1,116 @@
+@keyframes slideFromLeft {
+	from {
+		transform: translateX(calc(-50vw - 100%));
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+@keyframes slideFromRight {
+	from {
+		transform: translateX(calc(50vw + 100%));
+		opacity: 0;
+	}
+	to {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+
+.welcome {
+	width: 100%;
+	background-image: url('../img/burgery_grill.jpg');
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem;
+	overflow: hidden;
+}
+
+.welcome__backdrop {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.33);
+}
+
+.welcome__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	flex: 1;
+	max-height: 800px;
+	z-index: 10;
+}
+
+.welcome__logo {
+    width: 50vw;
+    max-width: 200px;
+    margin-bottom: 2rem;
+}
+
+.welcome__chooseCont {
+	display: flex;
+	flex-direction: column;
+}
+
+.welcome__chooseBox {
+	width: 300px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: white;
+	border: 2px solid black;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-size: 1.33rem;
+	color: black;
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+}
+
+.welcome__chooseBox--option {
+	background-color: black;
+	border: 2px solid white;
+	color: white;
+}
+
+.welcome__chooseBox--animatedFromLeft {
+	animation: slideFromLeft 0.66s cubic-bezier(0.55, -0.01, 0.62, 1.26);
+}
+
+.welcome__chooseBox--animatedFromRight {
+	animation: slideFromRight 0.66s cubic-bezier(0.55, -0.01, 0.62, 1.26);
+}
+
+@media (min-width: $desktop--min--width) {
+	.welcome__logo {
+		width: 100%;
+	}
+
+	.welcome__chooseBox {
+		width: 400px;
+		height: 60px;
+		margin-bottom: 0;
+	}
+
+	.welcome__chooseText {
+		font-size: 2rem;
+    }
+    
+    .welcome__chooseBox--animatedFromLeft, .welcome__chooseBox--animatedFromRight {
+        animation-duration: 1s;
+    }
+}

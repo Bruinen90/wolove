@@ -334,17 +334,31 @@ const mapStyle = [
 	},
 ];
 
-export const markerOptions = {
-	animation: google.maps.Animation.DROP,
-	icon: {
-		url: './img/map_pin.png',
-		scaledSize: new google.maps.Size(75, 125),
-	},
-};
-
-export const mapParams = {
-	zoom: 16,
-	mapTypeControl: false,
-	styles: mapStyle,
-	streetViewControl: false,
-};
+function initMap() {
+	const mapParamsMistrzejowice = {
+		center: { lat: 50.095911, lng: 19.997131 },
+		zoom: 16,
+		mapTypeControl: false,
+		styles: mapStyle,
+		streetViewControl: false,
+	};
+	const mapMistrzejowice = new google.maps.Map(
+		document.querySelector('.map--mistrzejowice'),
+		mapParamsMistrzejowice
+	);
+	const markerMistrzejowice = new google.maps.Marker({
+		position: new google.maps.LatLng(50.095911, 19.997131),
+		map: mapMistrzejowice,
+		animation: google.maps.Animation.DROP,
+		icon: {
+			url: './img/map_pin.png',
+			scaledSize: new google.maps.Size(75, 125),
+		},
+	});
+	google.maps.event.addListener(markerMistrzejowice, 'click', () =>
+		window.open(
+			'https://www.google.com/maps/dir/?api=1&destination=QVB&destination_place_id=ChIJtZVgjrBaFkcRxR3ldrOsOYU',
+			'_blank'
+		)
+	);
+}
