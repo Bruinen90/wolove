@@ -53,9 +53,9 @@
 }
 
 .welcome__logo {
-    width: 50vw;
-    max-width: 200px;
-    margin-bottom: 2rem;
+	width: 50vw;
+	max-width: 200px;
+	margin-bottom: 2rem;
 }
 
 .welcome__chooseCont {
@@ -95,6 +95,22 @@
 	animation: slideFromRight 0.66s cubic-bezier(0.55, -0.01, 0.62, 1.26);
 }
 
+.welcome__chooseBox--newOne {
+	position: relative;
+	overflow: hidden;
+	&::after {
+		content: 'Już otwarte!';
+		position: absolute;
+		top: 15px;
+		right: -27px;
+		font-size: 0.5rem;
+		font-weight: normal;
+		background-color: #db5a42;
+		padding: 4px 32px;
+		transform: rotate(30deg);
+	}
+}
+
 @media (min-width: $desktop--min--width) {
 	.welcome__logo {
 		width: 100%;
@@ -108,9 +124,10 @@
 
 	.welcome__chooseText {
 		font-size: 2rem;
-    }
-    
-    .welcome__chooseBox--animatedFromLeft, .welcome__chooseBox--animatedFromRight {
-        animation-duration: 1s;
-    }
+	}
+
+	.welcome__chooseBox--animatedFromLeft,
+	.welcome__chooseBox--animatedFromRight {
+		animation-duration: 1s;
+	}
 }

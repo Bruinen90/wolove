@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
@@ -1024,6 +1025,22 @@ a {
   animation: slideFromRight 0.66s cubic-bezier(0.55, -0.01, 0.62, 1.26);
 }
 
+.welcome__chooseBox--newOne {
+  position: relative;
+  overflow: hidden;
+}
+.welcome__chooseBox--newOne::after {
+  content: "Już otwarte!";
+  position: absolute;
+  top: 15px;
+  right: -27px;
+  font-size: 0.5rem;
+  font-weight: normal;
+  background-color: #db5a42;
+  padding: 4px 32px;
+  transform: rotate(30deg);
+}
+
 @media (min-width: 768px) {
   .welcome__logo {
     width: 100%;
@@ -1039,7 +1056,8 @@ a {
     font-size: 2rem;
   }
 
-  .welcome__chooseBox--animatedFromLeft, .welcome__chooseBox--animatedFromRight {
+  .welcome__chooseBox--animatedFromLeft,
+.welcome__chooseBox--animatedFromRight {
     animation-duration: 1s;
   }
 }

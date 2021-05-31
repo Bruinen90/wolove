@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pl" dir="ltr">
+	<head>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script
+			async
+			src="https://www.googletagmanager.com/gtag/js?id=UA-133015549-1"
+		></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-133015549-1');
+		</script>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/css?family=Montserrat:400i,600,900|Passion+One"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<title>
+			WoLove Burgers - burgery Nowa Huta zajezdnia Mistrzejowice
+		</title>
+		<meta
+			name="description"
+			content="Pyszne burgery w Nowej Hucie i Zielonkach. Przyjdź i odkryj slow-food! Kraków, os. Złotego Wieku 94"
+		/>
+		<link rel="canonical" href="http://www.woloveburgers.pl/" />
+		<!-- Favicons -->
+		<link
+			rel="apple-touch-icon"
+			sizes="57x57"
+			href="img/favicon//apple-icon-57x57.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="60x60"
+			href="img/favicon//apple-icon-60x60.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="72x72"
+			href="img/favicon//apple-icon-72x72.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="76x76"
+			href="img/favicon//apple-icon-76x76.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="114x114"
+			href="img/favicon//apple-icon-114x114.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="120x120"
+			href="img/favicon//apple-icon-120x120.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="144x144"
+			href="img/favicon//apple-icon-144x144.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="152x152"
+			href="img/favicon//apple-icon-152x152.png"
+		/>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="img/favicon//apple-icon-180x180.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="192x192"
+			href="img/favicon//android-icon-192x192.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="img/favicon//favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="96x96"
+			href="img/favicon//favicon-96x96.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="img/favicon//favicon-16x16.png"
+		/>
+		<link rel="manifest" href="img/favicon//manifest.json" />
+		<meta name="msapplication-TileColor" content="#ffffff" />
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+		<meta name="theme-color" content="#ffffff" />
+		<!-- /Favicons -->
+	</head>
+	<body>
+		<div class="menuToggler" onClick="toggleMenu()">
+			<div class="menuToggler__bar menuToggler__bar1"></div>
+			<div class="menuToggler__bar menuToggler__bar2"></div>
+			<div class="menuToggler__bar menuToggler__bar3"></div>
+		</div>
+
+		<div class="nav nav--hidden">
+			<ul class="nav__list">
+				<li class="nav__item" data-target="menu">
+					<ion-icon class="nav__icon" name="list"></ion-icon>
+					Nasze menu
+				</li>
+				<li class="nav__item" data-target="kontakt">
+					<ion-icon class="nav__icon" name="call"></ion-icon>
+					Zamów i odbierz
+				</li>
+				<li class="nav__item" data-target="kontakt">
+					<ion-icon class="nav__icon" name="pin"></ion-icon>
+					Kontakt
+				</li>
+				<li class="nav__item nav__item--fanpage" data-target="facebook">
+					<div>
+						<ion-icon
+							class="nav__icon"
+							name="logo-facebook"
+						></ion-icon>
+						Nasze fanpage
+					</div>
+					<ul
+						class="nav__fanpageContainer nav__fanpageContainer--hidden"
+					>
+						<li class="nav__fanpage">
+							<a
+								href="https://www.facebook.com/WoloveBurgersMistrzejowiceNH/"
+								target="_blank"
+							>
+								<ion-icon
+									class="nav__icon"
+									name="home"
+								></ion-icon>
+								Mistrzejowice NH
+							</a>
+						</li>
+						<li class="nav__fanpage">
+							<a
+								href="https://www.facebook.com/WoLoveBurgers/"
+								target="_blank"
+							>
+								<ion-icon
+									class="nav__icon"
+									name="home"
+								></ion-icon>
+								Nowa Huta
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<div class="cover cover--hidden" onclick="toggleMenu()"></div>
+
+		<section class="slider">
+			<div class="slider__container">
+				<div class="slider__slide slider__slide--1"></div>
+				<div class="slider__slide slider__slide--2"></div>
+				<div class="slider__slide slider__slide--3"></div>
+				<div class="slider__slide slider__slide--4"></div>
+				<div class="slider__slide slider__slide--5"></div>
+				<div class="slider__slide slider__slide--6"></div>
+				<div class="slider__slide slider__slide--7"></div>
+			</div>
+		</section>
+
+		<section class="mainContainer">
+			<div class="mainContainer__container">
+				<div class="logoCircle__container">
+					<img src="./img/logo_medium.png" class="logoCircle__logo" />
+				</div>
+				<div class="logoCircle__logoBg"></div>
+
+				<div class="about">
+					Wolove Burgers to miejsce, które powstało z pasji do
+					zdrowego jedzenia - slow food. Tak! Burgery mogą być zdrowe,
+					jeśli są przygotowane z wysokiej jakości świeżego miesa
+					wołowego bez zbędnych polepszaczy smaku.
+					<div class="mouseIcon"></div>
+				</div>
+
+				<article class="menu" id="#menu">
+					<div class="header__container">
+						<div class="header__text header__text--small">
+							Wolove<br />Burgers
+						</div>
+						<div class="header__text">Menu</div>
+					</div>
+
+					<div class="menu__container"></div>
+
+					<div class="menu__meat">
+						<p>
+							Każdy z naszym burgerów zawiera 100 lub 200 gramów
+							najwyższej jakości, 100% mięsa wołowego od lokalnych
+							dostawców.
+						</p>
+						<p>
+							W naszych burgerach znajdziesz tylko naturalne
+							przyprawy, lokalne produkty, soczyste warzywa,
+							aromatyczne sery i wyjątkowe sosy. Wszystko po to,
+							abyś mógł poznać smak najlepszych burgerów.
+						</p>
+					</div>
+				</article>
+
+				<section class="quotes">
+					<div class="quotes__quoteContainer">
+						<div class="quotes__quote">
+							<!-- Here comes a random quote from quotes.js -->
+						</div>
+						<div class="quotes__author">
+							<!-- Here comes an author from quotes.js -->
+						</div>
+					</div>
+				</section>
+
+				<section class="kontakt">
+					<div>
+						<div class="header__container">
+							<div class="header__text header__text--small">
+								Wolove<br />Burgers
+							</div>
+							<div class="header__text">Kontakt</div>
+						</div>
+					</div>
+
+					<div class="kontakt__choicesContainer">
+						<div class="kontakt__choiceContainer">
+							<h3 class="kontakt__header">
+								Kraków - Nowa Huta
+							</h3>
+							<div class="kontakt__address">
+								os. Spółdzielcze 12b
+							</div>
+							<div class="kontakt__callAndCollect">
+								Zamów i odbierz
+								<div class="kontakt__textBig">
+									<a
+										href="tel: +48886803295"
+										class="kontakt__phoneLink kontakt__phoneLink--active"
+										>889 140 578</a
+									>
+								</div>
+							</div>
+							<div class="kontakt__openingHours">
+								<div class="kontakt__textSmall">
+									Godziny otwarcia:
+								</div>
+								<div class="kontakt__textBig">
+									11:00 - 21:00
+								</div>
+								<div class="kontakt__textSmall">
+									poniedziałek - piątek
+								</div>
+								<div class="kontakt__textBig">
+									12:00 - 21:00
+								</div>
+								<div class="kontakt__textSmall">
+									sobota, niedziela
+								</div>
+							</div>
+							<a
+								href="./index.html"
+								class="kontakt__changeRestaurantBox"
+							>
+								Zmień restaurację
+							</a>
+						</div>
+					</div>
+
+					<div class="kontakt__mapsContainer">
+						<div class="map map--mistrzejowice"></div>
+					</div>
+				</section>
+
+				<section class="footer">
+					<div
+						class="logoCircle__container logoCircle__container--dark"
+					>
+						<img
+							src="./img/logo_medium_white.png"
+							class="logoCircle__logo"
+						/>
+					</div>
+
+					<div class="footer__container">
+						<div class="tags__list">
+							<!-- Here comes tags from tags.js -->
+						</div>
+
+						<a href="mailto: maxbruinen@gmail.com" class="sign">
+							©Bruinen web development
+						</a>
+					</div>
+				</section>
+			</div>
+		</section>
+
+		<script type="text/javascript" src="js/slider.js"></script>
+		<script type="text/javascript" src="js/menu.js"></script>
+		<script type="text/javascript" src="js/mapNowaHuta.js"></script>
+		<script type="text/javascript" src="js/quotes.js"></script>
+		<script type="text/javascript" src="js/tags.js"></script>
+		<script type="text/javascript" src="js/menuToggler.js"></script>
+		<script
+			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDtycky70BZsEgCJ_5X21AsbPBI5L_yiE4&callback=initMap"
+			async
+			defer
+		></script>
+		<script src="https://unpkg.com/ionicons@4.5.0/dist/ionicons.js"></script>
+	</body>
+</html>
