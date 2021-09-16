@@ -343,7 +343,7 @@ function initMap() {
 		streetViewControl: false,
 	};
 	const mapNowaHuta = new google.maps.Map(
-		document.querySelector('.map--mistrzejowice'),
+		document.querySelector('.map--nowahuta'),
 		mapParamsNowaHuta
 	);
 	const markerNowaHuta = new google.maps.Marker({

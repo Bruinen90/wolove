@@ -1028,6 +1028,7 @@ a {
 .welcome__chooseBox--newOne {
   position: relative;
   overflow: hidden;
+  font-size: 0.9rem;
 }
 .welcome__chooseBox--newOne::after {
   content: "Już otwarte!";
